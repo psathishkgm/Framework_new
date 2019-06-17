@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="43871" started-at="2019-06-16T17:11:21Z" finished-at="2019-06-16T17:12:05Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="43871" started-at="2019-06-16T17:11:21Z" finished-at="2019-06-16T17:12:05Z">
+      <class name="com.framework.testcases.Testcasewithframework">
+        <test-method status="PASS" signature="setupsuite()[pri:0, instance:com.framework.testcases.Testcasewithframework@5622fdf]" name="setupsuite" is-config="true" duration-ms="742" started-at="2019-06-16T17:11:21Z" finished-at="2019-06-16T17:11:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupsuite -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.framework.testcases.Testcasewithframework@5622fdf]" name="setup" is-config="true" duration-ms="10979" started-at="2019-06-16T17:11:21Z" finished-at="2019-06-16T17:11:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test()[pri:0, instance:com.framework.testcases.Testcasewithframework@5622fdf]" name="test" duration-ms="31467" started-at="2019-06-16T17:11:32Z" finished-at="2019-06-16T17:12:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.framework.testcases.Testcasewithframework@5622fdf]" name="teardown" is-config="true" duration-ms="1394" started-at="2019-06-16T17:12:04Z" finished-at="2019-06-16T17:12:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.framework.testcases.Testcasewithframework -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
