@@ -4,10 +4,11 @@ import java.io.File;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
+import org.testng.Reporter;
 import org.testng.annotations.*;
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.framework.utilities.*;
 
@@ -19,35 +20,53 @@ public class BaseClass {
 	public ExtentReports report;
 	public ExtentTest logger;
 	
-	@BeforeSuite
+	@BeforeSuite // this will run at beginning of starting the test
 	public void setupsuite() throws Exception {
 		
+		Reporter.log("Setup will do",true);
 		excel = new ExcelDataProvider();
 		config = new ConfigfileLoader();
-		ExtentHtmlReporter extent = new ExtentHtmlReporter(new File("./Reports/Facebook.html"));
+		ExtentHtmlReporter extent = new ExtentHtmlReporter(new File("./Reports/Facebook "+Helper.getCurrentDate()+".html"));
 		report = new ExtentReports();
 		report.attachReporter(extent);
+		Reporter.log("Setup done and test cases are executing",true);
 	}
 	
-	@BeforeClass
+	@BeforeClass // before starting test run once
 	public void setup() {
+	
+	Reporter.log("Browser launching",true);
 	
 	driver = BrowserFactory.startBrowser(driver,config.getBrowser(), config.getURL());
 	
+	Reporter.log("Browser lauched",true);
+	
 	}
 	
-	@AfterClass
+	@AfterClass // after completion of entire test only run  once
 	public void teardown() {
 	
-	  BrowserFactory.quitbrowser(driver);
+	   Reporter.log("Quiting",true);
+		
+	   BrowserFactory.quitbrowser(driver);
+	   
+	   Reporter.log("Quiting done",true);
 	  
 	}
 	
-	@AfterMethod
-	public void teardownMessage(ITestResult result) {
+	@AfterMethod // if 2 test means 2 times will run
+	public void teardownMessage(ITestResult result) throws Exception {
+		
+		Reporter.log("Test in After method",true);
+		
 		if(result.getStatus() == ITestResult.FAILURE) {
-			Helper.CaptureScreenshot(driver);
+			logger.fail("Test Failed", MediaEntityBuilder.createScreenCaptureFromPath(Helper.CaptureScreenshot(driver)).build());
+		}
+		else if(result.getStatus() == ITestResult.SUCCESS) {
+				logger.pass("Test Passed", MediaEntityBuilder.createScreenCaptureFromPath(Helper.CaptureScreenshot(driver)).build());
 		}
 		report.flush();
+		
+		Reporter.log("Test completed and Reports generated",true);
 	}
 }

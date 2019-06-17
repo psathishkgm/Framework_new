@@ -7,7 +7,7 @@ import com.framework.pages.LoginPage;
 
 public class Testcasewithframework extends BaseClass {
 	
-@Test
+@Test()
 
 public void test() throws Exception {
 	
@@ -15,6 +15,6 @@ public void test() throws Exception {
 	LoginPage login = PageFactory.initElements(driver, LoginPage.class);
 	logger.info("Started the test");
 	login.login_page(excel.getStringdata("Login", 0, 0), excel.getStringdata("Login", 0, 1));
-	logger.pass("done successfully");
+	logger.pass("Done successfully");
 }
 }
