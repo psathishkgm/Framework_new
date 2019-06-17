@@ -23,5 +23,6 @@ public class LoginPage {
 	  driver.findElement(password).sendKeys(passw);
 	  driver.findElement(login).click();
 	  Thread.sleep(2000);
+	  
   }
 }
