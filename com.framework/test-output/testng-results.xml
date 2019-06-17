@@ -1,25 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
+    <line>
+      <![CDATA[Setup will do]]>
+    </line>
+    <line>
+      <![CDATA[Setup done and test cases are executing]]>
+    </line>
+    <line>
+      <![CDATA[Browser launching]]>
+    </line>
+    <line>
+      <![CDATA[Browser lauched]]>
+    </line>
+    <line>
+      <![CDATA[Test in After method]]>
+    </line>
+    <line>
+      <![CDATA[Test completed and Reports generated]]>
+    </line>
+    <line>
+      <![CDATA[Quiting]]>
+    </line>
+    <line>
+      <![CDATA[Quiting done]]>
+    </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="25562" started-at="2019-06-17T16:30:44Z" finished-at="2019-06-17T16:31:09Z">
+  <suite name="Suite" duration-ms="28525" started-at="2019-06-17T17:28:26Z" finished-at="2019-06-17T17:28:55Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="25562" started-at="2019-06-17T16:30:44Z" finished-at="2019-06-17T16:31:09Z">
+    <test name="Test" duration-ms="28525" started-at="2019-06-17T17:28:26Z" finished-at="2019-06-17T17:28:55Z">
       <class name="com.framework.testcases.Testcasewithframework">
-        <test-method status="PASS" signature="setupsuite()[pri:0, instance:com.framework.testcases.Testcasewithframework@6a41eaa2]" name="setupsuite" is-config="true" duration-ms="1128" started-at="2019-06-17T16:30:43Z" finished-at="2019-06-17T16:30:44Z">
+        <test-method status="PASS" signature="setupsuite()[pri:0, instance:com.framework.testcases.Testcasewithframework@6a41eaa2]" name="setupsuite" is-config="true" duration-ms="851" started-at="2019-06-17T17:28:25Z" finished-at="2019-06-17T17:28:26Z">
           <reporter-output>
+            <line>
+              <![CDATA[Setup will do]]>
+            </line>
+            <line>
+              <![CDATA[Setup done and test cases are executing]]>
+            </line>
           </reporter-output>
         </test-method> <!-- setupsuite -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.framework.testcases.Testcasewithframework@6a41eaa2]" name="setup" is-config="true" duration-ms="9630" started-at="2019-06-17T16:30:44Z" finished-at="2019-06-17T16:30:53Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.framework.testcases.Testcasewithframework@6a41eaa2]" name="setup" is-config="true" duration-ms="10726" started-at="2019-06-17T17:28:26Z" finished-at="2019-06-17T17:28:37Z">
           <reporter-output>
+            <line>
+              <![CDATA[Browser launching]]>
+            </line>
+            <line>
+              <![CDATA[Browser lauched]]>
+            </line>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test()[pri:0, instance:com.framework.testcases.Testcasewithframework@6a41eaa2]" name="test" duration-ms="13158" started-at="2019-06-17T16:30:53Z" finished-at="2019-06-17T16:31:07Z">
+        <test-method status="PASS" signature="test()[pri:0, instance:com.framework.testcases.Testcasewithframework@6a41eaa2]" name="test" duration-ms="15702" started-at="2019-06-17T17:28:37Z" finished-at="2019-06-17T17:28:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="teardownMessage(org.testng.ITestResult)[pri:0, instance:com.framework.testcases.Testcasewithframework@6a41eaa2]" name="teardownMessage" is-config="true" duration-ms="1184" started-at="2019-06-17T16:31:07Z" finished-at="2019-06-17T16:31:08Z">
+        <test-method status="PASS" signature="teardownMessage(org.testng.ITestResult)[pri:0, instance:com.framework.testcases.Testcasewithframework@6a41eaa2]" name="teardownMessage" is-config="true" duration-ms="945" started-at="2019-06-17T17:28:52Z" finished-at="2019-06-17T17:28:53Z">
           <params>
             <param index="0">
               <value>
@@ -28,10 +64,22 @@
             </param>
           </params>
           <reporter-output>
+            <line>
+              <![CDATA[Test in After method]]>
+            </line>
+            <line>
+              <![CDATA[Test completed and Reports generated]]>
+            </line>
           </reporter-output>
         </test-method> <!-- teardownMessage -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.framework.testcases.Testcasewithframework@6a41eaa2]" name="teardown" is-config="true" duration-ms="1559" started-at="2019-06-17T16:31:08Z" finished-at="2019-06-17T16:31:09Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.framework.testcases.Testcasewithframework@6a41eaa2]" name="teardown" is-config="true" duration-ms="1125" started-at="2019-06-17T17:28:53Z" finished-at="2019-06-17T17:28:55Z">
           <reporter-output>
+            <line>
+              <![CDATA[Quiting]]>
+            </line>
+            <line>
+              <![CDATA[Quiting done]]>
+            </line>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.framework.testcases.Testcasewithframework -->
