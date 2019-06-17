@@ -1,7 +1,10 @@
 package com.framework.utilities;
 
 import java.io.File;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -12,6 +15,14 @@ public class Helper {
 	
 	private static String timestamp;
 	private static String time;
+	
+	public static String getCurrentDate()
+	{
+		DateFormat date = new SimpleDateFormat("MM_dd_yyyy_HH_mm_ss");
+		Date currentDate = new Date();
+		
+		return date.format(currentDate);
+	}
 	
 	public static String getCurrentDateTime() {
 
@@ -30,7 +41,7 @@ public class Helper {
 			
 			File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
-			time = getCurrentDateTime();
+			time = getCurrentDate();
 
 			pathOfScreenShot = System.getProperty("user.dir") + "\\Screenshot\\Screenshot" + time + ".png";
 

@@ -8,6 +8,7 @@
           <include name="setup"/>
           <include name="teardown"/>
           <include name="test"/>
+          <include name="teardownMessage"/>
           <include name="setupsuite"/>
         </methods>
       </class> <!-- com.framework.testcases.Testcasewithframework -->

@@ -11,7 +11,10 @@ public class Testcasewithframework extends BaseClass {
 
 public void test() throws Exception {
 	
+	logger = report.createTest("Login to Facebook");
 	LoginPage login = PageFactory.initElements(driver, LoginPage.class);
+	logger.info("Started the test");
 	login.login_page(excel.getStringdata("Login", 0, 0), excel.getStringdata("Login", 0, 1));
+	logger.pass("done successfully");
 }
 }
