@@ -33,11 +33,12 @@ public class BaseClass {
 	}
 	
 	@BeforeClass // before starting test run once
-	public void setup() {
+	@Parameters ({"browser","url"})
+	public void setup(String browser,String url) {
 	
 	Reporter.log("Browser launching",true);
 	
-	driver = BrowserFactory.startBrowser(driver,config.getBrowser(), config.getURL());
+	driver = BrowserFactory.startBrowser(driver,browser, url);
 	
 	Reporter.log("Browser lauched",true);
 	

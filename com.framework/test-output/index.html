@@ -143,6 +143,8 @@
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;Chrome&quot;/&gt;
+    &lt;parameter name=&quot;url&quot; value=&quot;https://www.facebook.com/&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.framework.testcases.Testcasewithframework&quot;/&gt;
     &lt;/classes&gt;
@@ -188,12 +190,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'test')
 data.setCell(0, 2, 'com.framework.testcases.Testcasewithframework')
-data.setCell(0, 3, 15702);
+data.setCell(0, 3, 19636);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 15 seconds</span>
+              <span class="suite-total-time">Total running time: 19 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -225,20 +227,20 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
-                <span class="method-name">setup</span>
-                <span class="method-start">862 ms</span>
+                <span class="method-name">setup(Chrome, https://www.facebook.com/)</span>
+                <span class="method-start">847 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">test</span>
-                <span class="method-start">11600 ms</span>
+                <span class="method-start">12851 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardownMessage([TestResult name=test status=SUCCESS method=Testcasewithframework.test()[pri:0, instance:com.framewo...)</span>
-                <span class="method-start">27304 ms</span>
+                <span class="method-start">32491 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">28249 ms</span>
+                <span class="method-start">33532 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
