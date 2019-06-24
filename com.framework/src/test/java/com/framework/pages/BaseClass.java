@@ -26,13 +26,13 @@ public class BaseClass {
 		Reporter.log("Setup will do",true);
 		excel = new ExcelDataProvider();
 		config = new ConfigfileLoader();
-		ExtentHtmlReporter extent = new ExtentHtmlReporter(new File("./Reports/Facebook "+Helper.getCurrentDate()+".html"));
+		ExtentHtmlReporter extent = new ExtentHtmlReporter(new File("./Reports/Facebook_"+ Helper.getCurrentDate() +".html"));
 		report = new ExtentReports();
 		report.attachReporter(extent);
 		Reporter.log("Setup done and test cases are executing",true);
 	}
 	
-	@BeforeClass // before starting test run once
+	@BeforeClass // before starting test run once per class
 	@Parameters ({"browser","url"})
 	public void setup(String browser,String url) {
 	
@@ -44,7 +44,7 @@ public class BaseClass {
 	
 	}
 	
-	@AfterClass // after completion of entire test only run  once
+	@AfterClass // after completion of entire test only run  once per class
 	public void teardown() {
 	
 	   Reporter.log("Quiting",true);

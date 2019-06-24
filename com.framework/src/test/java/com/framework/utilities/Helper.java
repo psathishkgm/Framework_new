@@ -14,7 +14,7 @@ import org.openqa.selenium.WebDriver;
 public class Helper {
 	
 	private static String timestamp;
-	private static String time;
+	//private static String time;
 	
 	public static String getCurrentDate()
 	{
@@ -40,10 +40,8 @@ public class Helper {
 		try {
 			
 			File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-
-			time = getCurrentDate();
-
-			pathOfScreenShot = System.getProperty("user.dir") + "\\Screenshot\\Screenshot" + time + ".png";
+			
+			pathOfScreenShot = System.getProperty("user.dir") + "\\Screenshot\\Screenshot" + getCurrentDate() + ".png";
 
 			FileUtils.copyFile(scrFile, new File(pathOfScreenShot));
 

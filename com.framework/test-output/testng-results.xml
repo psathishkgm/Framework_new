@@ -26,12 +26,12 @@
       <![CDATA[Quiting done]]>
     </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="34105" started-at="2019-06-17T18:26:32Z" finished-at="2019-06-17T18:27:06Z">
+  <suite name="Suite" duration-ms="28745" started-at="2019-06-18T05:02:08Z" finished-at="2019-06-18T05:02:36Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="34105" started-at="2019-06-17T18:26:32Z" finished-at="2019-06-17T18:27:06Z">
+    <test name="Test" duration-ms="28745" started-at="2019-06-18T05:02:08Z" finished-at="2019-06-18T05:02:36Z">
       <class name="com.framework.testcases.Testcasewithframework">
-        <test-method status="PASS" signature="setupsuite()[pri:0, instance:com.framework.testcases.Testcasewithframework@5622fdf]" name="setupsuite" is-config="true" duration-ms="834" started-at="2019-06-17T18:26:31Z" finished-at="2019-06-17T18:26:32Z">
+        <test-method status="PASS" signature="setupsuite()[pri:0, instance:com.framework.testcases.Testcasewithframework@5622fdf]" name="setupsuite" is-config="true" duration-ms="1010" started-at="2019-06-18T05:02:07Z" finished-at="2019-06-18T05:02:08Z">
           <reporter-output>
             <line>
               <![CDATA[Setup will do]]>
@@ -41,7 +41,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- setupsuite -->
-        <test-method status="PASS" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.framework.testcases.Testcasewithframework@5622fdf]" name="setup" is-config="true" duration-ms="11994" started-at="2019-06-17T18:26:32Z" finished-at="2019-06-17T18:26:44Z">
+        <test-method status="PASS" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.framework.testcases.Testcasewithframework@5622fdf]" name="setup" is-config="true" duration-ms="12393" started-at="2019-06-18T05:02:08Z" finished-at="2019-06-18T05:02:20Z">
           <params>
             <param index="0">
               <value>
@@ -63,11 +63,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test()[pri:0, instance:com.framework.testcases.Testcasewithframework@5622fdf]" name="test" duration-ms="19636" started-at="2019-06-17T18:26:44Z" finished-at="2019-06-17T18:27:04Z">
+        <test-method status="PASS" signature="test()[pri:0, instance:com.framework.testcases.Testcasewithframework@5622fdf]" name="test" duration-ms="12143" started-at="2019-06-18T05:02:20Z" finished-at="2019-06-18T05:02:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="teardownMessage(org.testng.ITestResult)[pri:0, instance:com.framework.testcases.Testcasewithframework@5622fdf]" name="teardownMessage" is-config="true" duration-ms="1041" started-at="2019-06-17T18:27:04Z" finished-at="2019-06-17T18:27:05Z">
+        <test-method status="PASS" signature="teardownMessage(org.testng.ITestResult)[pri:0, instance:com.framework.testcases.Testcasewithframework@5622fdf]" name="teardownMessage" is-config="true" duration-ms="2485" started-at="2019-06-18T05:02:32Z" finished-at="2019-06-18T05:02:35Z">
           <params>
             <param index="0">
               <value>
@@ -84,7 +84,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- teardownMessage -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.framework.testcases.Testcasewithframework@5622fdf]" name="teardown" is-config="true" duration-ms="1406" started-at="2019-06-17T18:27:05Z" finished-at="2019-06-17T18:27:06Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.framework.testcases.Testcasewithframework@5622fdf]" name="teardown" is-config="true" duration-ms="1697" started-at="2019-06-18T05:02:35Z" finished-at="2019-06-18T05:02:36Z">
           <reporter-output>
             <line>
               <![CDATA[Quiting]]>
