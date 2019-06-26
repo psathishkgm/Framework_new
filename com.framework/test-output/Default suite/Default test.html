@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Jun 16 22:15:46 IST 2019</td>
+<td>Started on:</td><td>Wed Jun 26 19:57:34 IST 2019</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (73 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (51 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,13 +75,13 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.framework.testcases.Testcasewithframework.setup()'><b>setup</b><br>Test class: com.framework.testcases.Testcasewithframework</td>
+<td title='com.databaseconnectivity.Database.setup()'><b>setup</b><br>Test class: com.databaseconnectivity.Database</td>
 <td><div><pre>org.testng.TestNGException: 
-Can inject only one of &lt;ITestContext, XmlTest&gt; into a @BeforeClass annotated setup.
-For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
-	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:407)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:635)
+Parameter &apos;browser&apos; is required by BeforeClass on method setup but has not been marked @Optional or defined
+in C:\Users\C5274787\AppData\Local\Temp\testng-eclipse--870222303\testng-customsuite.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:290)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:620)
 	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
@@ -102,13 +102,13 @@ For more information on native dependency injection please refer to http://testn
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace3213500", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace3213500'><pre>org.testng.TestNGException: 
-Can inject only one of &lt;ITestContext, XmlTest&gt; into a @BeforeClass annotated setup.
-For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
-	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:407)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:635)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1687940142", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1687940142'><pre>org.testng.TestNGException: 
+Parameter &apos;browser&apos; is required by BeforeClass on method setup but has not been marked @Optional or defined
+in C:\Users\C5274787\AppData\Local\Temp\testng-eclipse--870222303\testng-customsuite.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:290)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:620)
 	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
@@ -131,7 +131,7 @@ For more information on native dependency injection please refer to http://testn
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>com.framework.testcases.Testcasewithframework@53b32d7</td></tr>
+<td>com.databaseconnectivity.Database@464bee09</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
@@ -141,10 +141,15 @@ For more information on native dependency injection please refer to http://testn
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.framework.testcases.Testcasewithframework.teardown()'><b>teardown</b><br>Test class: com.framework.testcases.Testcasewithframework</td>
+<td title='com.databaseconnectivity.Database.teardownMessage()'><b>teardownMessage</b><br>Test class: com.databaseconnectivity.Database</td>
 <td></td>
 <td>0</td>
-<td>com.framework.testcases.Testcasewithframework@53b32d7</td></tr>
+<td>com.databaseconnectivity.Database@464bee09</td></tr>
+<tr>
+<td title='com.databaseconnectivity.Database.teardown()'><b>teardown</b><br>Test class: com.databaseconnectivity.Database</td>
+<td></td>
+<td>0</td>
+<td>com.databaseconnectivity.Database@464bee09</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -154,13 +159,13 @@ For more information on native dependency injection please refer to http://testn
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.framework.testcases.Testcasewithframework.test()'><b>test</b><br>Test class: com.framework.testcases.Testcasewithframework</td>
+<td title='com.databaseconnectivity.Database.test1()'><b>test1</b><br>Test class: com.databaseconnectivity.Database</td>
 <td><div><pre>org.testng.TestNGException: 
-Can inject only one of &lt;ITestContext, XmlTest&gt; into a @BeforeClass annotated setup.
-For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
-	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:407)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:635)
+Parameter &apos;browser&apos; is required by BeforeClass on method setup but has not been marked @Optional or defined
+in C:\Users\C5274787\AppData\Local\Temp\testng-eclipse--870222303\testng-customsuite.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:290)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:620)
 	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
@@ -181,13 +186,13 @@ For more information on native dependency injection please refer to http://testn
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace215145189", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace215145189'><pre>org.testng.TestNGException: 
-Can inject only one of &lt;ITestContext, XmlTest&gt; into a @BeforeClass annotated setup.
-For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
-	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:407)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:635)
+</pre></div><a href='#' onClick='toggleBox("stack-trace542365801", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace542365801'><pre>org.testng.TestNGException: 
+Parameter &apos;browser&apos; is required by BeforeClass on method setup but has not been marked @Optional or defined
+in C:\Users\C5274787\AppData\Local\Temp\testng-eclipse--870222303\testng-customsuite.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:290)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:620)
 	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
@@ -210,7 +215,7 @@ For more information on native dependency injection please refer to http://testn
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>com.framework.testcases.Testcasewithframework@53b32d7</td></tr>
+<td>com.databaseconnectivity.Database@464bee09</td></tr>
 </table><p>
 </body>
 </html>
