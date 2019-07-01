@@ -43,6 +43,7 @@ public class BrowserFactory {
 			System.setProperty("webdriver.chrome.driver", DRIVER_PATH);
             ChromeOptions options = new ChromeOptions();
 			options.addArguments("--disable-infobars");
+			options.addArguments("disable-popup-blocking");
 			options.addArguments("--disable-extensions");
 			options.setExperimentalOption("prefs", chromePrefs);
 			DesiredCapabilities capabilities = new DesiredCapabilities();
