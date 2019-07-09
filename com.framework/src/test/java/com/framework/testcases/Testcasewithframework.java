@@ -7,7 +7,7 @@ import com.framework.pages.LoginPage;
 
 public class Testcasewithframework extends BaseClass {
 	
-@Test()
+@Test
 
 public void test() throws Exception {
 	
