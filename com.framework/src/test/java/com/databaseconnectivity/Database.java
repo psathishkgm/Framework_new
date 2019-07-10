@@ -5,7 +5,6 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 import com.framework.pages.BaseClass;
@@ -29,5 +28,7 @@ public class Database extends BaseClass {
 			String sele = rs.getString("Selenium");
 			System.out.println(sele);
 		}
+		
+		
 	}
 }
