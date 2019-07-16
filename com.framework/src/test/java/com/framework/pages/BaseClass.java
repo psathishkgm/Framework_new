@@ -17,6 +17,7 @@ public class BaseClass {
 	public WebDriver driver;
 	public ExcelDataProvider excel;
 	public ConfigfileLoader config;
+	public ExtentHtmlReporter extent;
 	public ExtentReports report;
 	public ExtentTest logger;
 	
@@ -26,7 +27,7 @@ public class BaseClass {
 		Reporter.log("Setup will do",true);
 		excel = new ExcelDataProvider();
 		config = new ConfigfileLoader();
-		ExtentHtmlReporter extent = new ExtentHtmlReporter(new File("./Reports/Facebook_"+ Helper.getCurrentDate() +".html"));
+		extent = new ExtentHtmlReporter(new File("./Reports/Facebook_"+ Helper.getCurrentDate() +".html"));
 		report = new ExtentReports();
 		report.attachReporter(extent);
 		Reporter.log("Setup done and test cases are executing",true);
