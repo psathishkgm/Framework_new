@@ -3,6 +3,8 @@ package com.framework.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import com.framework.utilities.Helper;
+
 public class LoginPage {
 	
 	WebDriver driver;
@@ -19,9 +21,9 @@ public class LoginPage {
   public void login_page(String uname, String passw) throws Exception {
 	  
 	  Thread.sleep(2000);
-	  driver.findElement(mail).sendKeys(uname);
-	  driver.findElement(password).sendKeys(passw);
-	  driver.findElement(login).click();
+	  Helper.clickElement(driver, uname, mail);
+	  Helper.clickElement(driver, passw, password);
+	  Helper.clickfunction(driver, login);
 	  Thread.sleep(2000);
 	  
   }
