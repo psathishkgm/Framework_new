@@ -21,9 +21,9 @@ public class LoginPage {
   public void login_page(String uname, String passw) throws Exception {
 	  
 	  Thread.sleep(2000);
-	  Helper.clickElement(driver, uname, mail);
-	  Helper.clickElement(driver, passw, password);
-	  Helper.clickfunction(driver, login);
+	  Helper.getElementByProperty(driver, mail, 2).sendKeys(uname);
+	  Helper.getElementByProperty(driver, password, 2).sendKeys(passw);
+	  Helper.getElementByProperty(driver, login, 2).click();
 	  Thread.sleep(2000);
 	  
   }

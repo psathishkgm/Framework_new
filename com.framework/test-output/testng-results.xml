@@ -26,12 +26,12 @@
       <![CDATA[Quiting done]]>
     </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="77484" started-at="2019-08-14T12:46:32Z" finished-at="2019-08-14T12:47:50Z">
+  <suite name="Suite" duration-ms="68914" started-at="2019-08-19T07:09:56Z" finished-at="2019-08-19T07:11:04Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="77484" started-at="2019-08-14T12:46:32Z" finished-at="2019-08-14T12:47:50Z">
+    <test name="Test" duration-ms="68914" started-at="2019-08-19T07:09:56Z" finished-at="2019-08-19T07:11:04Z">
       <class name="com.framework.testcases.Testcasewithframework">
-        <test-method status="PASS" signature="setupsuite()[pri:0, instance:com.framework.testcases.Testcasewithframework@4dfa3a9d]" name="setupsuite" is-config="true" duration-ms="671" started-at="2019-08-14T12:46:31Z" finished-at="2019-08-14T12:46:32Z">
+        <test-method status="PASS" signature="setupsuite()[pri:0, instance:com.framework.testcases.Testcasewithframework@4dfa3a9d]" name="setupsuite" is-config="true" duration-ms="612" started-at="2019-08-19T07:09:55Z" finished-at="2019-08-19T07:09:56Z">
           <reporter-output>
             <line>
               <![CDATA[Setup will do]]>
@@ -41,7 +41,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- setupsuite -->
-        <test-method status="PASS" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.framework.testcases.Testcasewithframework@4dfa3a9d]" name="setup" is-config="true" duration-ms="17439" started-at="2019-08-14T12:46:32Z" finished-at="2019-08-14T12:46:50Z">
+        <test-method status="PASS" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.framework.testcases.Testcasewithframework@4dfa3a9d]" name="setup" is-config="true" duration-ms="16436" started-at="2019-08-19T07:09:56Z" finished-at="2019-08-19T07:10:12Z">
           <params>
             <param index="0">
               <value>
@@ -63,7 +63,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="test()[pri:0, instance:com.framework.testcases.Testcasewithframework@4dfa3a9d]" name="test" duration-ms="57744" started-at="2019-08-14T12:46:50Z" finished-at="2019-08-14T12:47:47Z">
+        <test-method status="FAIL" signature="test()[pri:0, instance:com.framework.testcases.Testcasewithframework@4dfa3a9d]" name="test" duration-ms="50682" started-at="2019-08-19T07:10:12Z" finished-at="2019-08-19T07:11:03Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@data-tooltip-content='Notifications']"}
@@ -75,7 +75,7 @@ Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17
 System info: host: 'IN-BLR-SHRVSL27', ip: '10.33.16.55', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.35.528161 (5b82f2d2aae0ca..., userDataDir: C:\Users\ksathish\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 76.0.3809.100, webStorageEnabled: true}
-Session ID: ff924c748300238a62bae2672da04b65
+Session ID: 0797b8c7237214d35f5f893b1662f104
 *** Element info: {Using=xpath, value=//*[@data-tooltip-content='Notifications']}]]>
             </message>
             <full-stacktrace>
@@ -88,7 +88,7 @@ Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17
 System info: host: 'IN-BLR-SHRVSL27', ip: '10.33.16.55', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.35.528161 (5b82f2d2aae0ca..., userDataDir: C:\Users\ksathish\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 76.0.3809.100, webStorageEnabled: true}
-Session ID: ff924c748300238a62bae2672da04b65
+Session ID: 0797b8c7237214d35f5f893b1662f104
 *** Element info: {Using=xpath, value=//*[@data-tooltip-content='Notifications']}
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
@@ -139,7 +139,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="teardownMessage(org.testng.ITestResult)[pri:0, instance:com.framework.testcases.Testcasewithframework@4dfa3a9d]" name="teardownMessage" is-config="true" duration-ms="1034" started-at="2019-08-14T12:47:47Z" finished-at="2019-08-14T12:47:48Z">
+        <test-method status="PASS" signature="teardownMessage(org.testng.ITestResult)[pri:0, instance:com.framework.testcases.Testcasewithframework@4dfa3a9d]" name="teardownMessage" is-config="true" duration-ms="671" started-at="2019-08-19T07:11:03Z" finished-at="2019-08-19T07:11:03Z">
           <params>
             <param index="0">
               <value>
@@ -156,7 +156,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </line>
           </reporter-output>
         </test-method> <!-- teardownMessage -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.framework.testcases.Testcasewithframework@4dfa3a9d]" name="teardown" is-config="true" duration-ms="1242" started-at="2019-08-14T12:47:48Z" finished-at="2019-08-14T12:47:50Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.framework.testcases.Testcasewithframework@4dfa3a9d]" name="teardown" is-config="true" duration-ms="1108" started-at="2019-08-19T07:11:03Z" finished-at="2019-08-19T07:11:04Z">
           <reporter-output>
             <line>
               <![CDATA[Quiting]]>

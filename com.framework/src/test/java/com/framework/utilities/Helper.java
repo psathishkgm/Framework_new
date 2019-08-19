@@ -5,7 +5,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-
+import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -13,6 +13,8 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 
 public class Helper {
 	
@@ -56,30 +58,23 @@ public class Helper {
 		return pathOfScreenShot;
 	}
 
-	public static void clickElement(WebDriver driver, String value, By xpath) {
-		WebElement ele = driver.findElement(xpath);
-		highlightElement(driver, ele);
-		ele.sendKeys(value);
+	public static WebElement getElementByProperty(WebDriver driver, By locator, int time) {
+		@SuppressWarnings("deprecation")
+		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(time, TimeUnit.SECONDS)
+				.pollingEvery(5, TimeUnit.SECONDS).ignoring(Throwable.class);
+		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+		wait.until(ExpectedConditions.elementToBeClickable(locator));
+		WebElement element = driver.findElement(locator);
+		elementHighlight(driver, element, 8);
+		return element;
 	}
-	
-	public static void clickfunction(WebDriver driver, By xpath) {
-		WebElement ele = driver.findElement(xpath);
-		highlightElement(driver, ele);
-		ele.click();
+		
+	public static void elementHighlight(WebDriver driver, WebElement Webelement,int wait_time) {
+		String originalStyle = Webelement.getAttribute("style");
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid yellow;');",
+				Webelement);
+		jse.executeScript("arguments[0].setAttribute('style', '" + originalStyle + "');", Webelement);
 	}
-	
-	public static void highlightElement(WebDriver driver, WebElement element)
-	{
-	JavascriptExecutor js=(JavascriptExecutor)driver; 
-	js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", element);
-	try 
-	{
-	Thread.sleep(1000);
-	} 
-	catch (InterruptedException e) {
-	 
-	System.out.println(e.getMessage());
-	} 	 
-	}
-
 }

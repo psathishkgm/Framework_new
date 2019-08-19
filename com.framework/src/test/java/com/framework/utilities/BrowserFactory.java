@@ -2,6 +2,7 @@ package com.framework.utilities;
 
 import java.io.File;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
@@ -39,10 +40,12 @@ public class BrowserFactory {
 			HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
 			chromePrefs.put("profile.default_content_settings.popups", 0);
 			chromePrefs.put("download.default_directory", "C:\\SeleniumDownloadFiles");
+			chromePrefs.put("profile.default_content_setting_values.notifications", 2);
 			String DRIVER_PATH ="./Drivers/chromedriver.exe";
 			System.setProperty("Dwebdriver.chrome.driver", DRIVER_PATH);
             ChromeOptions options = new ChromeOptions();
-			options.addArguments("--disable-infobars");
+            options.setExperimentalOption("useAutomationExtension", false);
+			options.setExperimentalOption("excludeSwitches",Collections.singletonList("enable-automation"));
 			options.addArguments("disable-popup-blocking");
 			options.addArguments("--disable-extensions");
 			options.setExperimentalOption("prefs", chromePrefs);

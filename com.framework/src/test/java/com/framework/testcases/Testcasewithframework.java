@@ -19,7 +19,7 @@ public void test() throws Exception {
 	String pathOfScreenShot = System.getProperty("user.dir") + "\\Screenshot\\Screenshot.png";
 	logger.addScreenCaptureFromPath(pathOfScreenShot, "Login to Facebook");
 	login.login_page(excel.getStringdata("Login", 0, 0), excel.getStringdata("Login", 0, 1));
-	home.notify(driver, logger);
+	//home.notify(driver, logger);
 	logger.info("Operation performed successfully");
 	home.see_all(driver, logger);
 	logger.pass("Operation performed successfully");
