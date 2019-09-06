@@ -23,10 +23,10 @@ public class Database extends BaseClass {
 		Reporter.log("Connection given",true);
 		Statement stmt = con.createStatement();
 		ResultSet rs = stmt.executeQuery("Select * from database");
-		while(rs.next())//next is first element by default
+		while(rs.next()) //next is first element by default
 		{
-			String sele = rs.getString("Selenium");
-			System.out.println(sele);
+		String sele = rs.getString("Selenium");
+		System.out.println(sele);
 		}
 		
 		
