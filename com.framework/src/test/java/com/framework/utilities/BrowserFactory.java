@@ -5,8 +5,6 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
@@ -18,8 +16,6 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.safari.SafariDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
 public class BrowserFactory {
@@ -31,6 +27,11 @@ public class BrowserFactory {
 			String DRIVER_PATH = "./Drivers/geckodriver.exe";
 			System.setProperty("webdriver.gecko.driver", DRIVER_PATH);
 			FirefoxProfile p = new FirefoxProfile();
+			// To download inside project folder
+			p.setPreference("browser.download.panel.shown", false);
+			p.setPreference("browser.helperApps.neverAsk.saveToDisk", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel,application/zip,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document");
+			p.setPreference("browser.download.folderList", 2);
+			p.setPreference("browser.download.dir", System.getProperty("user.dir"));
 			p.setAcceptUntrustedCertificates(true);
 			p.setAssumeUntrustedCertificateIssuer(false);
 			driver = new FirefoxDriver();
@@ -71,6 +72,13 @@ public class BrowserFactory {
 			capabilities.setCapability(InternetExplorerDriver.IGNORE_ZOOM_SETTING, true);
 			String DRIVER_PATH = System.getProperty("user.dir") + "\\src\\test\\resources\\IEDriverServer.exe";
 			System.setProperty("webdriver.ie.driver", DRIVER_PATH);
+			String path = System.getProperty("user.dir");
+			String cmd = "REG ADD \"HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\" /F /V \"Default Download Directory\" /T REG_SZ /D "+ path;
+			try {
+			    Runtime.getRuntime().exec(cmd);
+			} catch (Exception e) {
+			    System.out.println("Coulnd't change the registry for default directory for IE");
+			}
 			driver = new InternetExplorerDriver(capabilities);
 		
 		} else if (browser.equalsIgnoreCase("Safari")) {
