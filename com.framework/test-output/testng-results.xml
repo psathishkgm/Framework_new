@@ -26,12 +26,12 @@
       <![CDATA[Quiting done]]>
     </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="68914" started-at="2019-08-19T07:09:56Z" finished-at="2019-08-19T07:11:04Z">
+  <suite name="Suite" duration-ms="78149" started-at="2020-03-03T11:39:40Z" finished-at="2020-03-03T11:40:58Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="68914" started-at="2019-08-19T07:09:56Z" finished-at="2019-08-19T07:11:04Z">
+    <test name="Test" duration-ms="78149" started-at="2020-03-03T11:39:40Z" finished-at="2020-03-03T11:40:58Z">
       <class name="com.framework.testcases.Testcasewithframework">
-        <test-method status="PASS" signature="setupsuite()[pri:0, instance:com.framework.testcases.Testcasewithframework@4dfa3a9d]" name="setupsuite" is-config="true" duration-ms="612" started-at="2019-08-19T07:09:55Z" finished-at="2019-08-19T07:09:56Z">
+        <test-method status="PASS" signature="setupsuite()[pri:0, instance:com.framework.testcases.Testcasewithframework@3c0ecd4b]" name="setupsuite" is-config="true" duration-ms="1208" started-at="2020-03-03T11:39:38Z" finished-at="2020-03-03T11:39:40Z">
           <reporter-output>
             <line>
               <![CDATA[Setup will do]]>
@@ -41,7 +41,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- setupsuite -->
-        <test-method status="PASS" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.framework.testcases.Testcasewithframework@4dfa3a9d]" name="setup" is-config="true" duration-ms="16436" started-at="2019-08-19T07:09:56Z" finished-at="2019-08-19T07:10:12Z">
+        <test-method status="PASS" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.framework.testcases.Testcasewithframework@3c0ecd4b]" name="setup" is-config="true" duration-ms="27705" started-at="2020-03-03T11:39:40Z" finished-at="2020-03-03T11:40:07Z">
           <params>
             <param index="0">
               <value>
@@ -63,33 +63,33 @@
             </line>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="test()[pri:0, instance:com.framework.testcases.Testcasewithframework@4dfa3a9d]" name="test" duration-ms="50682" started-at="2019-08-19T07:10:12Z" finished-at="2019-08-19T07:11:03Z">
+        <test-method status="FAIL" signature="test()[pri:0, instance:com.framework.testcases.Testcasewithframework@3c0ecd4b]" name="test" duration-ms="48909" started-at="2020-03-03T11:40:07Z" finished-at="2020-03-03T11:40:56Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@data-tooltip-content='Notifications']"}
-  (Session info: chrome=76.0.3809.100)
-  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"(//a[@class='seeMore']//span[text()='See All'])[2]"}
+  (Session info: chrome=80.0.3987.122)
+  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'IN-BLR-SHRVSL27', ip: '10.33.16.55', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+System info: host: 'IN-BLR-L007', ip: '10.33.16.55', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.35.528161 (5b82f2d2aae0ca..., userDataDir: C:\Users\ksathish\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 76.0.3809.100, webStorageEnabled: true}
-Session ID: 0797b8c7237214d35f5f893b1662f104
-*** Element info: {Using=xpath, value=//*[@data-tooltip-content='Notifications']}]]>
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.35.528161 (5b82f2d2aae0ca..., userDataDir: C:\Users\SPERIY~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 80.0.3987.122, webStorageEnabled: true}
+Session ID: 171fbe25111d30fa7b40573b2d18681a
+*** Element info: {Using=xpath, value=(//a[@class='seeMore']//span[text()='See All'])[2]}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@data-tooltip-content='Notifications']"}
-  (Session info: chrome=76.0.3809.100)
-  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//a[@class='seeMore']//span[text()='See All'])[2]"}
+  (Session info: chrome=80.0.3987.122)
+  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'IN-BLR-SHRVSL27', ip: '10.33.16.55', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+System info: host: 'IN-BLR-L007', ip: '10.33.16.55', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.35.528161 (5b82f2d2aae0ca..., userDataDir: C:\Users\ksathish\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 76.0.3809.100, webStorageEnabled: true}
-Session ID: 0797b8c7237214d35f5f893b1662f104
-*** Element info: {Using=xpath, value=//*[@data-tooltip-content='Notifications']}
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.35.528161 (5b82f2d2aae0ca..., userDataDir: C:\Users\SPERIY~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 80.0.3987.122, webStorageEnabled: true}
+Session ID: 171fbe25111d30fa7b40573b2d18681a
+*** Element info: {Using=xpath, value=(//a[@class='seeMore']//span[text()='See All'])[2]}
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -106,8 +106,8 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at com.framework.pages.HomePage.notify(HomePage.java:16)
-at com.framework.testcases.Testcasewithframework.test(Testcasewithframework.java:22)
+at com.framework.pages.HomePage.see_all(HomePage.java:23)
+at com.framework.testcases.Testcasewithframework.test(Testcasewithframework.java:24)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -139,11 +139,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="teardownMessage(org.testng.ITestResult)[pri:0, instance:com.framework.testcases.Testcasewithframework@4dfa3a9d]" name="teardownMessage" is-config="true" duration-ms="671" started-at="2019-08-19T07:11:03Z" finished-at="2019-08-19T07:11:03Z">
+        <test-method status="PASS" signature="teardownMessage(org.testng.ITestResult)[pri:0, instance:com.framework.testcases.Testcasewithframework@3c0ecd4b]" name="teardownMessage" is-config="true" duration-ms="772" started-at="2020-03-03T11:40:56Z" finished-at="2020-03-03T11:40:57Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test status=FAILURE method=Testcasewithframework.test()[pri:0, instance:com.framework.testcases.Testcasewithframework@4dfa3a9d] output={null}]]]>
+                <![CDATA[[TestResult name=test status=FAILURE method=Testcasewithframework.test()[pri:0, instance:com.framework.testcases.Testcasewithframework@3c0ecd4b] output={null}]]]>
               </value>
             </param>
           </params>
@@ -156,7 +156,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </line>
           </reporter-output>
         </test-method> <!-- teardownMessage -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.framework.testcases.Testcasewithframework@4dfa3a9d]" name="teardown" is-config="true" duration-ms="1108" started-at="2019-08-19T07:11:03Z" finished-at="2019-08-19T07:11:04Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.framework.testcases.Testcasewithframework@3c0ecd4b]" name="teardown" is-config="true" duration-ms="702" started-at="2020-03-03T11:40:57Z" finished-at="2020-03-03T11:40:58Z">
           <reporter-output>
             <line>
               <![CDATA[Quiting]]>

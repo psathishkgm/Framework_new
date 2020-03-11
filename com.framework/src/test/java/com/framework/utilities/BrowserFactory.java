@@ -17,6 +17,8 @@ import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.Reporter;
+import java.util.logging.*;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BrowserFactory {
 	 		
@@ -37,7 +39,8 @@ public class BrowserFactory {
 			driver = new FirefoxDriver();
 
 		} else if (browser.equalsIgnoreCase("Chrome")) {
-
+			disableSeleniumLogs();
+			WebDriverManager.chromedriver().setup();
 			HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
 			chromePrefs.put("profile.default_content_settings.popups", 0);
 			chromePrefs.put("download.default_directory", "C:\\SeleniumDownloadFiles");
@@ -114,5 +117,9 @@ public class BrowserFactory {
 		
 		driver.quit();
 	}
-
+ 
+	public static void disableSeleniumLogs() {    
+	    System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
+	    Logger.getLogger("org.openqa.selenium").setLevel(Level.OFF);
+	}
 }
