@@ -7,6 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentTest;
+import com.framework.utilities.Helper;
 
 public class HomePage {
 	
@@ -22,6 +23,13 @@ public void see_all(WebDriver driver, ExtentTest logger) throws Exception {
 	
 	WebElement see_all = driver.findElement(By.xpath("(//a[@class='seeMore']//span[text()='See All'])[2]"));
 	new Actions(driver).moveToElement(see_all).click().build().perform();
+	logger.pass("Clicked on See all");
+}
+
+@Test
+public void tab_switching(WebDriver driver, ExtentTest logger) throws Exception {
+	
+	Helper.SwitchtonewWindow(driver, "https:www.google.co.in", "https:www.twitter.com");
 	logger.pass("Clicked on See all");
 }
 }

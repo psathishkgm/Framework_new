@@ -12,7 +12,7 @@ public class Testcasewithoutframework {
 @Test
 public void test() throws Exception {
 	
-	System.setProperty("webdriver.chrome.driver", "C:\\Users\\C5274787\\Desktop\\chromedriver.exe");
+	System.setProperty("webdriver.chrome.driver", "C:\\Users\\ksathish\\git\\Framework_new\\com.framework\\Drivers\\chromedriver.exe");
 	WebDriver driver = new ChromeDriver();
 	driver.manage().window().maximize();
 	driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);

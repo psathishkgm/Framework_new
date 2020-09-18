@@ -21,7 +21,7 @@ public void test() throws Exception {
 	login.login_page(excel.getStringdata("Login", 0, 0), excel.getStringdata("Login", 0, 1));
 	//home.notify(driver, logger);
 	logger.info("Operation performed successfully");
-	home.see_all(driver, logger);
+	home.tab_switching(driver, logger);
 	logger.pass("Operation performed successfully");
 	logger.pass("Done successfully");
 }

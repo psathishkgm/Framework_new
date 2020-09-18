@@ -50,7 +50,7 @@ public class BaseClass {
 	
 	   Reporter.log("Quiting",true);
 		
-	   BrowserFactory.quitbrowser(driver);
+	   //BrowserFactory.quitbrowser(driver);
 	   
 	   Reporter.log("Quiting done",true);
 	  

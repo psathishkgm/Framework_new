@@ -3,9 +3,10 @@ package com.framework.utilities;
 import java.io.File;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -13,6 +14,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WindowType;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -61,9 +63,8 @@ public class Helper {
 	}
 
 	public static WebElement getElementByProperty(WebDriver driver, By locator, int time) {
-		@SuppressWarnings("deprecation")
-		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(time, TimeUnit.SECONDS)
-				.pollingEvery(5, TimeUnit.SECONDS).ignoring(Throwable.class);
+		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(time))
+				.pollingEvery(Duration.ofSeconds(time)).ignoring(Throwable.class);
 		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 		wait.until(ExpectedConditions.elementToBeClickable(locator));
@@ -81,9 +82,8 @@ public class Helper {
 	}
 	
 	public static WebElement getElementByProperty(WebDriver driver, String property_value, int time) {
-		@SuppressWarnings("deprecation")
-		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(time, TimeUnit.SECONDS)
-				.pollingEvery(5, TimeUnit.SECONDS).ignoring(Throwable.class);
+		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(time))
+				.pollingEvery(Duration.ofSeconds(time)).ignoring(Throwable.class);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath((property_value))));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath((property_value))));
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath((property_value))));
@@ -97,6 +97,7 @@ public class Helper {
 		return element;
 	}
 	
+	@SuppressWarnings("deprecation")
 	public static void enterTextUsingJavaScriptExecutor(WebDriver driver, By locator, String text, String locatorType) {
 		WebDriverWait wait = new WebDriverWait(driver, 20);
 		JavascriptExecutor js = (JavascriptExecutor)driver;
@@ -109,9 +110,8 @@ public class Helper {
 	}
 	
 	public static WebElement getElementByXpath(WebDriver driver, String locator, int time) throws InterruptedException {
-		@SuppressWarnings("deprecation")
-		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(time, TimeUnit.SECONDS)
-				.pollingEvery(5, TimeUnit.SECONDS).ignoring(Throwable.class);
+		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(time))
+				.pollingEvery(Duration.ofSeconds(time)).ignoring(Throwable.class);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator)));
 		WebElement element = driver.findElement(By.xpath(locator));
@@ -121,9 +121,8 @@ public class Helper {
 	}
 	
 	public static WebElement getElementByClassName(WebDriver driver, String locator, int time) throws InterruptedException {
-		@SuppressWarnings("deprecation")
-		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(time, TimeUnit.SECONDS)
-				.pollingEvery(5, TimeUnit.SECONDS).ignoring(Throwable.class);
+		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(time))
+				.pollingEvery(Duration.ofSeconds(time)).ignoring(Throwable.class);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.className(locator)));
 		wait.until(ExpectedConditions.elementToBeClickable(By.className(locator)));
 		WebElement element = driver.findElement(By.className(locator));
@@ -132,16 +131,17 @@ public class Helper {
 		return element;
 	}
 	
+	@SuppressWarnings("deprecation")
 	public static void webDriverwait_keyvalue(WebDriver driver,String text) throws Exception {
-		
 		WebDriverWait wait = new WebDriverWait(driver, 100);
 		// explicit wait for property values
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath((text))));
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath((text))));
 	}
 
+	@SuppressWarnings("deprecation")
 	public static void webDriverwait_locator(WebDriver driver,String locator, String locatorType) throws Exception {
-		
+				
 		WebDriverWait wait = new WebDriverWait(driver, 100);
 		// explicit wait for locator values
 		if (locatorType.equalsIgnoreCase("xpath")) {
@@ -154,8 +154,6 @@ public class Helper {
 	}
 	
 	public static boolean DownloadFileVerify(WebDriver driver,String property) throws Exception {
-		// Verify the downloaded file as excel by comparing the filename title and
-		// downloaded file name
 		Thread.sleep(5000);
 		String series_title = driver.findElement(By.xpath((property))).getText();
 		String downloadPath = System.getProperty("user.dir");
@@ -171,5 +169,17 @@ public class Helper {
 		}
 		Assert.fail("Download to Excel verification failed");
 		return false;
+	}
+	
+	public static void SwitchtonewWindow(WebDriver driver,String childURL,String parentURL) throws Exception {
+		ArrayList<String> child = new ArrayList<String>(driver.getWindowHandles());
+		String parent = driver.getWindowHandle();
+		driver.get(parentURL);
+		//driver.switchTo().window(child.get(1));
+		WebDriver newWindow = driver.switchTo().newWindow(WindowType.TAB);
+		newWindow.get(childURL);
+		driver.switchTo().window(child.get(1)).close();
+		driver.switchTo().window(parent);
+		
 	}
 }

@@ -22,12 +22,12 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BrowserFactory {
 	 		
+	@SuppressWarnings("deprecation")
 	public static WebDriver startBrowser(WebDriver driver,String browser,String url) {
 
 		if (browser.equalsIgnoreCase("FireFox")) {
 
-			String DRIVER_PATH = "./Drivers/geckodriver.exe";
-			System.setProperty("webdriver.gecko.driver", DRIVER_PATH);
+			WebDriverManager.firefoxdriver().setup();
 			FirefoxProfile p = new FirefoxProfile();
 			// To download inside project folder
 			p.setPreference("browser.download.panel.shown", false);
@@ -39,12 +39,18 @@ public class BrowserFactory {
 			driver = new FirefoxDriver();
 
 		} else if (browser.equalsIgnoreCase("Chrome")) {
+			try {
+				Runtime.getRuntime().exec("taskkill /F /IM chromedriver.exe");
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 			disableSeleniumLogs();
 			WebDriverManager.chromedriver().setup();
 			HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
+			String download = System.getProperty("user.home") + "\\Downloads";
 			chromePrefs.put("profile.default_content_settings.popups", 0);
-			chromePrefs.put("download.default_directory", "C:\\SeleniumDownloadFiles");
-			chromePrefs.put("profile.default_content_setting_values.notifications", 2);
+			chromePrefs.put("download.default_directory", download);
+			chromePrefs.put("profile.content_settings.exceptions.automatic_downloads.*.setting", 1);
 			String DRIVER_PATH ="./Drivers/chromedriver.exe";
 			System.setProperty("Dwebdriver.chrome.driver", DRIVER_PATH);
             ChromeOptions options = new ChromeOptions();
@@ -85,7 +91,6 @@ public class BrowserFactory {
 			driver = new InternetExplorerDriver(capabilities);
 		
 		} else if (browser.equalsIgnoreCase("Safari")) {
-
 			DesiredCapabilities capabilities = new DesiredCapabilities();
 			capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
 			capabilities.setCapability(CapabilityType.HAS_NATIVE_EVENTS, true);
