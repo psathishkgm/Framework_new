@@ -5,6 +5,8 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.UnexpectedAlertBehaviour;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
@@ -65,6 +67,7 @@ public class BrowserFactory {
 			capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);	 
 			capabilities.setCapability(CapabilityType.SUPPORTS_JAVASCRIPT, true);	
 			capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+			capabilities.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.ACCEPT);
 		    ChromeDriverService service = new ChromeDriverService.Builder().usingDriverExecutable(new File(DRIVER_PATH)).usingAnyFreePort().build();
 		    options.merge(capabilities);
 		    driver = new ChromeDriver(service,options);
