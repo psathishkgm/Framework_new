@@ -33,7 +33,7 @@ public class Helper {
 	}
 	
 	public static String getCurrentDateTime() {
-
+                // Getting the current date and time
 		Calendar cal = Calendar.getInstance();
 		timestamp = Integer.toString(cal.get(Calendar.DATE)) + Integer.toString(cal.get(Calendar.MONTH) + 1)
 				+ Integer.toString(cal.get(Calendar.YEAR)) + Integer.toString(cal.get(Calendar.HOUR))
