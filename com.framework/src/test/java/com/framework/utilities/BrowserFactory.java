@@ -58,6 +58,7 @@ public class BrowserFactory {
             ChromeOptions options = new ChromeOptions();
             options.setExperimentalOption("useAutomationExtension", false);
 			options.setExperimentalOption("excludeSwitches",Collections.singletonList("enable-automation"));
+			options.addArguments("--incognito");
 			options.addArguments("disable-popup-blocking");
 			options.addArguments("--disable-extensions");
 			options.setExperimentalOption("prefs", chromePrefs);
