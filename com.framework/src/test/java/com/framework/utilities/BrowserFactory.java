@@ -28,7 +28,6 @@ public class BrowserFactory {
 	public static WebDriver startBrowser(WebDriver driver,String browser,String url) {
 
 		if (browser.equalsIgnoreCase("FireFox")) {
-
 			WebDriverManager.firefoxdriver().setup();
 			FirefoxProfile p = new FirefoxProfile();
 			// To download inside project folder
