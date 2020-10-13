@@ -23,7 +23,6 @@ import org.testng.Assert;
 public class Helper {
 	
 	private static String timestamp;
-	//private static String time;
 	
 	public static String getCurrentDate()
 	{

@@ -42,7 +42,7 @@ public class BrowserFactory {
 			try {
 				Runtime.getRuntime().exec("taskkill /F /IM chromedriver.exe");
 			} catch (Exception e) {
-				e.printStackTrace();
+				
 			}
 			disableSeleniumLogs();
 			WebDriverManager.chromedriver().setup();

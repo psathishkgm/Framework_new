@@ -13,7 +13,6 @@ public class ExcelDataProvider {
 	public ExcelDataProvider() throws Exception {
 		
 		File src = new File("./Test_Data/Data.xlsx");
-		
 		FileInputStream fis = new FileInputStream(src);
 		wb = new XSSFWorkbook(fis);
 		
